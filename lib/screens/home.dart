@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/newsModel.dart';
+import 'package:newsapp/screens/indiaNews.dart';
 import 'package:newsapp/services/api_manager.dart';
 
 class Home extends StatefulWidget {
@@ -31,7 +32,10 @@ class _HomeState extends State<Home> {
               Icons.menu,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => IndiaNews()));
+            },
           )
         ],
       ),
